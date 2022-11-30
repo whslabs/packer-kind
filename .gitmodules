@@ -1,0 +1,3 @@
+[submodule "preseed"]
+	path = preseed
+	url = https://github.com/whslabs/preseed-debian11.git

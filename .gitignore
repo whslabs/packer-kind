@@ -1,0 +1,6 @@
+/output-*
+
+/packer
+/packer.pub
+
+/*.qcow2

@@ -1,0 +1,10 @@
+---
+# tasks file for role-kind
+- name: Install kind
+  ansible.builtin.get_url:
+    dest: /usr/local/bin/kind
+    mode: 0755
+    url: https://github.com/kubernetes-sigs/kind/releases/download/v{{ kind_version }}/kind-linux-amd64
+  become: yes
+- name: Create cluster
+  ansible.builtin.shell: sudo -upacker kind create cluster

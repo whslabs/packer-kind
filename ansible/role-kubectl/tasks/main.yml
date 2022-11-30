@@ -1,0 +1,12 @@
+---
+# tasks file for role-kubectl
+- name: Install kubectl
+  ansible.builtin.get_url:
+    dest: /usr/local/bin/kubectl
+    mode: 0755
+    url: https://dl.k8s.io/release/v{{ kubectl_version }}/bin/linux/amd64/kubectl
+  become: yes
+- name: Add k alias
+  ansible.builtin.lineinfile:
+    path: "{{ ansible_env.HOME }}/.bashrc"
+    line: alias k=kubectl

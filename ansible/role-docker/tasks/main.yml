@@ -1,0 +1,32 @@
+---
+# tasks file for role-docker
+- name: Install gnupg
+  ansible.builtin.apt:
+    name: gnupg
+    state: present
+  become: yes
+- name: Install docker gpg key
+  ansible.builtin.apt_key:
+    state: present
+    url: https://download.docker.com/linux/debian/gpg
+  become: yes
+- name: Install docker repository
+  ansible.builtin.apt_repository:
+    filename: docker
+    repo: deb https://download.docker.com/linux/debian {{ ansible_distribution_release }} stable
+    state: present
+  become: yes
+- name: Install docker
+  ansible.builtin.apt:
+    pkg:
+    - docker-ce
+    - docker-ce-cli
+    - containerd.io
+    - docker-compose-plugin
+    state: present
+  become: yes
+- name: Add packer to docker group
+  ansible.builtin.user:
+    group: docker
+    name: packer
+  become: yes

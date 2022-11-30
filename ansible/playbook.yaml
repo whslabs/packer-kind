@@ -1,0 +1,6 @@
+- name: Create kind
+  hosts: default
+
+  roles:
+    - role: role-kind
+    - role: role-kubectl
