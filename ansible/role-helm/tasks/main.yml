@@ -1,0 +1,11 @@
+---
+# tasks file for role-helm
+- name: Install helm
+  ansible.builtin.unarchive:
+    dest: /usr/local/bin/
+    remote_src: yes
+    src: https://get.helm.sh/helm-v{{ helm_version }}-linux-amd64.tar.gz
+    extra_opts:
+    - linux-amd64/helm
+    - --strip-components=1
+  become: yes

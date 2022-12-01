@@ -1,0 +1,10 @@
+---
+# tasks file for role-tilt
+- name: Install tilt
+  ansible.builtin.unarchive:
+    dest: /usr/local/bin/
+    remote_src: yes
+    src: https://github.com/tilt-dev/tilt/releases/download/v{{ tilt_version }}/tilt.{{ tilt_version }}.linux.x86_64.tar.gz
+    extra_opts:
+    - tilt
+  become: yes

@@ -2,5 +2,8 @@
   hosts: default
 
   roles:
+    - role: role-cguv
+    - role: role-helm
     - role: role-kind
     - role: role-kubectl
+    - role: role-tilt

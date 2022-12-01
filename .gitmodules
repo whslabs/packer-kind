@@ -1,3 +1,6 @@
 [submodule "preseed"]
 	path = preseed
 	url = https://github.com/whslabs/preseed-debian11.git
+[submodule "ansible/role-cguv"]
+	path = ansible/role-cguv
+	url = https://github.com/whslabs/ansible-role-cguv.git
