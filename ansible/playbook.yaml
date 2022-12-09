@@ -4,6 +4,7 @@
   roles:
     - role: role-cguv
     - role: role-helm
+    - role: role-jq
     - role: role-kind
     - role: role-kubectl
     - role: role-tilt

@@ -1,0 +1,8 @@
+---
+# tasks file for role-jq
+- name: Install jq
+  ansible.builtin.get_url:
+    dest: /usr/local/bin/jq
+    mode: 0755
+    url: https://github.com/stedolan/jq/releases/download/jq-{{ jq_version }}/jq-linux64
+  become: yes

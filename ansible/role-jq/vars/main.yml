@@ -1,0 +1,3 @@
+---
+# vars file for role-jq
+jq_version: 1.6
