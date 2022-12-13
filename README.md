@@ -34,3 +34,7 @@ virsh destroy debian11-$name
 virsh undefine --remove-all-storage debian11-$name
 )
 ```
+
+```sh
+ssh packer@$(sudo virsh net-dhcp-leases default | grep debian11-kind | awk '{print$5}' | cut -d/ -f1)
+```
