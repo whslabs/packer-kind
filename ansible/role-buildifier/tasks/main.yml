@@ -1,0 +1,8 @@
+---
+# tasks file for role-buildifier
+- name: Install buildifier
+  ansible.builtin.get_url:
+    dest: /usr/local/bin/buildifier
+    mode: 0755
+    url: https://github.com/bazelbuild/buildtools/releases/download/{{ buildifier_version }}/buildifier-linux-amd64
+  become: yes

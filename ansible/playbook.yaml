@@ -2,6 +2,7 @@
   hosts: default
 
   roles:
+    - role: role-buildifier
     - role: role-cguv
     - role: role-helm
     - role: role-jq
