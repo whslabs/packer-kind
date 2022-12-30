@@ -1,7 +1,7 @@
 # Install packer
 ```sh
-curl -O https://releases.hashicorp.com/packer/1.8.4/packer_1.8.4_linux_amd64.zip
-sudo unzip packer_1.8.4_linux_amd64.zip packer -d /usr/local/bin/
+curl -O https://releases.hashicorp.com/packer/1.8.5/packer_1.8.5_linux_amd64.zip
+sudo unzip packer_1.8.5_linux_amd64.zip packer -d /usr/local/bin/
 ```
 
 ```sh
