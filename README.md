@@ -4,6 +4,12 @@ curl -O https://releases.hashicorp.com/packer/1.8.5/packer_1.8.5_linux_amd64.zip
 sudo unzip packer_1.8.5_linux_amd64.zip packer -d /usr/local/bin/
 ```
 
+# Install ansible
+```sh
+python -m ensurepip
+pip3 install ansible
+```
+
 ```sh
 ./build.sh
 (
