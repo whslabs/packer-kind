@@ -17,7 +17,7 @@ source "qemu" "kind" {
   accelerator          = "kvm"
   disk_size            = "50G"
   http_directory       = "preseed"
-  iso_checksum         = "743ed06582dce4b714896b14fe7fd5eda66ab5203e3f94965b85924991a35d68"
+  iso_checksum         = "079465c0e590ca22db4a7ba48f6d347c774c067ba018440baabecb26b286e3d2"
   iso_url              = "https://deb.debian.org/debian/dists/bullseye/main/installer-amd64/current/images/netboot/mini.iso"
   memory               = 2048
   shutdown_command     = "sudo -S shutdown -P now"
